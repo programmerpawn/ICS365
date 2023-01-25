@@ -1,0 +1,39 @@
+
+import java.util.Scanner;
+
+public class MyClass {
+    public static void main(String args[]) {
+        Scanner scan = new Scanner(System.in);
+        
+        int grade = 0;
+        int oneTest[] = new int [2];
+        int testScores[] = new int[2];
+        String stuName[] = new String[2];
+
+        for ( int i = 0; i < 2; i++) {
+        	System.out.println("Enter Name: ");
+        	stuName[i] = scan.next();
+        	
+        	System.out.println("Enter 1 test score: ");
+        	testScores[i] = scan.nextInt();
+        	
+        	System.out.println("Enter 2 test score: ");
+        	oneTest[i] = scan.nextInt();
+        	
+        	grade = (testScores[i] + oneTest[i]);
+        	grade = grade/2;
+
+        }
+
+
+        for(int i = 0; i < 2; i++) {
+        	System.out.println("Student name: " + stuName[i]);
+        	System.out.println("first test score: " + testScores[i]);
+        	System.out.println("second test score: " + oneTest[i]);
+        	if(grade >= 93) {
+        		System.out.println("Grade = A\n");
+        	}
+        }
+        
+    }
+}

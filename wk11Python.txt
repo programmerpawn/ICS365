@@ -1,0 +1,17 @@
+nameList = []
+testList = []
+count = 2
+grade = 0;
+for i in range(0,count):
+    nameList.append(input('Enter name: '))
+    testList.append(input('Enter First Test Score: '))
+    testList.append(input('Enter Second Test Score: '))
+    grade = int((testList[i] + testList[i]))
+    grade = grade /2 
+    
+for i in range(0,count):
+    print('Student name is: ', nameList[i])
+    print('First test score is: ' , testList[1])
+    print('Second test score is: ' , testList[2])
+    if(grade >= 93):
+        print('Grade = A')
