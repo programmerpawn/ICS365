@@ -1,0 +1,71 @@
+print("enter two numbers to either sub or add")
+a = int(input()) 
+intAddOrSub = input()
+b = int(input())
+
+if intAddOrSub == "+":
+    print(f'Sum of {a} and {b} is {(a + b)}')
+else:
+    print(f'sub of {a} and {b} is {(a - b)}')
+
+===================================
+
+print("enter two numbers")
+a = int(input()) 
+b = int(input())
+total = 0
+
+for x in range(a,b):
+    total +=x
+print(total + (b))
+
+===================================
+import java.util.Scanner;
+
+public class mySum {
+	public static void main(String args[]) {
+		Scanner myObj = new Scanner(System.in);
+		int x = myObj.nextInt();
+		String operators = myObj.next();
+		int y = myObj.nextInt();
+		myObj.close();
+
+		int z = 0;
+
+		System.out.println("Enter two numbers");
+
+		if (operators.contains("+")) {
+			//System.out.println("add");
+			z = x + y;
+			System.out.println("Sum of " + x + " + " + y + " = " + z);
+		} else {
+			//System.out.println("sub");
+			z = x - y;
+			System.out.println("sub of " + x + " - " + y + " = " + z);
+		}
+
+	}
+}
+
+====================================
+
+package test2;
+
+import java.util.Scanner;
+
+public class excerise5 {
+	public static void main(String args[]) {
+		Scanner myObj = new Scanner(System.in);
+		int x = myObj.nextInt();
+		int y = myObj.nextInt();
+		
+		myObj.close();
+		int total = 0;
+		for (int z = x; z < y; z++) {
+			total += z;
+		}
+		System.out.println(total + y);
+
+	}
+}
+

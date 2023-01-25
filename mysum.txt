@@ -1,0 +1,13 @@
+cat > mysum
+#!/bin/bash
+total=$(($1+$2))
+echo "$1" + "$2" = "$total"
+
+total=$(($1-$2))
+echo "$1" - "$2" = "$total"
+
+total=$(($1*$2))
+echo "$1" \* "$2" = "$total"
+
+total=$(($1/$2))
+echo "$1" / "$2" = "$total"

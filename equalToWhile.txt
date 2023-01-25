@@ -1,0 +1,66 @@
+$ cat > aaa
+#!/bin/bash
+echo " This is file aaa"
+
+$ cat > bbb
+#!/bin/bash
+echo " This is file bbb"
+
+$ cat > ccc
+#!/bin/bash
+echo " This is file ccc"
+
+elif [[ $@ == "bbb" ]]
+then
+   mv bbb junk
+elif [[ $@ == "ccc" ]]
+then
+   mv ccc junk
+====================
+cat > myjunk 
+#!/bin/bash
+if [ ! -d " $junk " ]
+then
+mkdir -p junk
+fi
+
+for i in "$*"
+do
+if [[ $* == $* ]]
+then
+   mv $* junk
+else
+   echo "File-name-error: File $@ cannot be found"
+fi
+done
+
+if [ $1 == "-p" ]
+then
+   rm -r junk
+elif [[ $1 == "-l" ]
+then
+   ls -l junk
+fi
+
+
+==============
+cat > myjunk 
+#!/bin/bash
+if [ ! -d " $junk " ]
+then
+mkdir -p junk
+fi
+
+for i in "$*"
+do
+mv $* junk
+done 
+
+if [ $1 == "-p" ]
+then
+   rm -r junk
+elif [ $1 == "-l" ]
+then
+   ls -l junk
+fi
+

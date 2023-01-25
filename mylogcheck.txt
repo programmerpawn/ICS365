@@ -1,0 +1,64 @@
+#!/usr/bin/perl
+my ($option,$IPtype) = @ARGV;
+my $stuId;
+open(FILE,$ARGV[2] or die("Could not open the file $ARGC[0]);
+while ( $line = <FILE> ) {
+	($loginID, $term, $ip, $month, $time, $startLog, $dash, $endLog, $totalLog) = split(' ', $line);
+	($IPclass) = split('\.', $ip);
+	if ( $IPtype eq "B" ) {
+		if ( $IPclass > 128 && $IPclass <= 191) {
+			print "$loginID";
+			print "$term"
+			print "$ip"
+			print "$month"
+			print "$time"
+			print "$startLog"
+			print "$dash"
+			print "$endLog"
+			print "$totalLog\n"
+		}
+	}
+	elsif( $IPtype eq "C" ) {
+		if ( $IPclass > 192 && $IPclass <= 223) {
+			print "$loginID";
+			print "$term"
+			print "$ip"
+			print "$month"
+			print "$time"
+			print "$startLog"
+			print "$dash"
+			print "$endLog"
+			print "$totalLog\n"
+		}
+	}
+	elsif( $IPtype eq "A" ) {
+		if ( $IPclass > 0 && $IPclass <= 127) {
+			print "$loginID";
+			print "$term"
+			print "$ip"
+			print "$month"
+			print "$time"
+			print "$startLog"
+			print "$dash"
+			print "$endLog"
+			print "$totalLog\n"
+		}
+	}
+}
+elsif( $option eq "-u") {
+	if ($stuId eq $loginID ) {
+	print "Login records for $stuId\n";
+	print "$loginID";
+	print "$term"
+	print "$ip"
+	print "$month"
+	print "$time"
+	print "$startLog"
+	print "$dash"
+	print "$endLog"
+	print "$totalLog\n"
+	print "$stuId has spend $startLog and $endLog on the system.\n";
+}
+}
+}
+close(FILE);

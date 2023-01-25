@@ -1,0 +1,19 @@
+cat > myjunk 
+#!/bin/bash
+if [ ! -d " $junk " ]
+then
+mkdir -p junk
+fi
+
+for i in "$*"
+do
+mv $* junk
+done 
+
+if [ $1 == "-p" ]
+then
+   rm -r junk
+elif [ $1 == "-l" ]
+then
+   ls -l junk
+fi
